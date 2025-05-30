@@ -1,1 +1,1 @@
-# ssg
+# Maze Solver Project
