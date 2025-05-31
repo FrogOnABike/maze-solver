@@ -1,4 +1,5 @@
 from classes import *
+from maze import Maze
 
 def main():
     win = Window(800, 600)
@@ -11,7 +12,7 @@ def main():
     start_point4=Point(20,20)
     end_point4=Point(30,30)
     
-    test_maze = Maze(10,10,20,30,25,25,win)
+    test_maze = Maze(10,10,15,20,25,25,win)
     # test_cell1 = Cell(win)
     # test_cell2 = Cell(win)
     # test_cell3 = Cell(win)
