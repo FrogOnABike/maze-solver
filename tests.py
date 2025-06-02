@@ -66,6 +66,18 @@ class Tests(unittest.TestCase):
             m1._Maze__cells[num_cols-1][num_rows-1].has_bottom_wall,
             False,
         )
+    
+    def test_reset_visited_cells(self):
+        num_cols = 5
+        num_rows = 5
+        m1 = Maze(0, 0, num_rows, num_cols, 10, 10)
+        
+        for x,xv in enumerate(m1._Maze__cells):
+            for y,yv in enumerate(m1._Maze__cells[x]):
+                self.assertEqual(
+                    m1._Maze__cells[x][y]._Cell__visited,
+                    False,
+                )
         
 if __name__ == "__main__":
     unittest.main(verbosity=2)
