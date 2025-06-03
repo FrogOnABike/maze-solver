@@ -62,5 +62,5 @@ class Cell:
             self.__win.draw_line(move_line,fc)
         
     def __repr__(self):
-        return f"X1:{self.__x1},Y1:{self.__y1},X2:{self.__x2},Y2:{self.__y2}"
+        return f"X1:{self.__x1},Y1:{self.__y1},X2:{self.__x2},Y2:{self.__y2} T:{self.has_top_wall} B:{self.has_bottom_wall}, L:{self.has_left_wall}, R:{self.has_right_wall}"
     
