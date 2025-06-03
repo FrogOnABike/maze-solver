@@ -1,8 +1,10 @@
 from classes import *
 from maze import Maze
+import sys
 
 def main():
-    win = Window(800, 600)
+    sys.setrecursionlimit(1500)
+    win = Window(1024, 768)
     start_point1=Point(10,10)
     end_point1=Point(20,20)
     start_point2=Point(20,10)
@@ -12,7 +14,7 @@ def main():
     start_point4=Point(20,20)
     end_point4=Point(30,30)
     
-    test_maze = Maze(5,5,20,30,25,25,win)
+    test_maze = Maze(5,5,37,40,20,20,win)
     test_maze.solve()
     # test_cell1 = Cell(win)
     # test_cell2 = Cell(win)

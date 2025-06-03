@@ -54,11 +54,11 @@ class Maze():
         y2 = self.__y1 + (j)*self.__cell_size_y
         p2 = Point(x2,y2)
         self.__cells[i-1][j-1].draw(p1,p2)
-        self.__animate()
+        self.__animate(0)
     
-    def __animate(self):
+    def __animate(self,delay):
         self.__win.redraw()
-        time.sleep(0.02)
+        time.sleep(delay)
         
     def __break_entrance_and_exit(self):
         # print("Breaking entrance and exit")
@@ -86,7 +86,9 @@ class Maze():
             wall_break = [random.randint(0,2)]
         elif i == self.__num_cols-1: ## Right edge cells - Don't try and remove right wall
             wall_break = [random.randint(3,5)]
-        else: ## Internal cells - GO WILD!
+        elif i % 2 == 0 and j % 2 == 0: ## Even internal cells only get 1 wall removed
+            wall_break = [random.randint(1,4)]
+        else: ## Odd Internal cells get 2 walls removed
             wall_break = [random.randint(1,4),random.randint(1,4)]
         
         for n in wall_break:
@@ -179,7 +181,7 @@ class Maze():
     def __solve_r(self,i,j):
         print("Trying to solve!")
         print(f"Current Cell co-ords: {i},{j}")
-        self.__animate()
+        self.__animate(0.02)
         curr_cell = self.__cells[i][j]
         print(f"Cell details:{curr_cell}")
         
