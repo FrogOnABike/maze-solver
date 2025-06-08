@@ -13,7 +13,7 @@ def main():
     end_point3=Point(20,30)
     start_point4=Point(20,20)
     end_point4=Point(30,30)
-    
+    # Current maze dimensions seem about max it can render with the upped recursion limit!
     test_maze = Maze(5,5,37,40,20,20,win)
     test_maze.solve()
     # test_cell1 = Cell(win)
