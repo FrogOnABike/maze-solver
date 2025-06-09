@@ -242,6 +242,6 @@ class Maze():
                     curr_cell.draw_move(target_cell,True)
         
         # If all the above fails, it should mean the maze has no solution!           
-        else:
-            print("No solution found!")
-            return False
+        # else:
+        print("No solution found!")
+        return False
