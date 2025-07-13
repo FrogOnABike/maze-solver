@@ -3,7 +3,7 @@ from maze import Maze
 import sys
 
 def main():
-    sys.setrecursionlimit(1500)
+    sys.setrecursionlimit(1750)
     win = Window(1024, 768)
     start_point1=Point(10,10)
     end_point1=Point(20,20)
@@ -14,7 +14,7 @@ def main():
     start_point4=Point(20,20)
     end_point4=Point(30,30)
     # Current maze dimensions seem about max it can render with the upped recursion limit!
-    test_maze = Maze(5,5,37,40,20,20,win)
+    test_maze = Maze(5,5,39,40,20,20,win)
     test_maze.solve()
     # test_cell1 = Cell(win)
     # test_cell2 = Cell(win)
